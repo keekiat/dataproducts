@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predicting Your Score for The Data Products Course</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Predicting Your Score for The Data Products Course">
+  <meta name="author" content="Author A">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Predicting Your Score for The Data Products Course</h1>
+    <h2>Just for Fun =)</h2>
+    <p>Author A<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>This little application attempts to predict your score for the data products course</li>
+<li>This is useful to give the user a gauge whether if he / she is going to pass the course</li>
+<li>The objective is to let the user know, &quot;hey it is time to work harder&quot; or &quot;you are doing well&quot;</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>3 Questions</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The prediction is simple and asked the user to answer 3 questions:</p>
+
+<ul>
+<li>Do you find the course difficult?</li>
+<li>Do you intend to do the course project?</li>
+<li>On average what is your quiz score (Normalize it to 1 - 10)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Marking Criteria</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A score is given for each question that is answered. Specifically,</p>
+
+<ul>
+<li>Do you find the course difficult? --&gt; 1 mark is given for &quot;No&quot;</li>
+<li>Do you intend to do the course project? --&gt; 1 mark is given for yes</li>
+<li>On average what is your quiz score (Normalize it to 1 - 10) --&gt; 1 mark is given for &gt;7</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>An Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Based on the score, the user is given a remark. An example is given below:</p>
+
+<pre><code class="r">score &lt;-0
+ if (score == 3){
+    results &lt;-&#39;I am sure you will pass&#39;
+  }else if (score &gt;= 1){
+    results &lt;- &#39;Work harder and you might pass&#39;
+  }else{
+    results &lt;- &#39;Hmm, Roger Peng will be upset&#39;
+  }
+results
+</code></pre>
+
+<pre><code>## [1] &quot;Hmm, Roger Peng will be upset&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='3 Questions'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Marking Criteria'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='An Example'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
